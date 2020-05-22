@@ -10,10 +10,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname));
 
-app.get("/", async (req, res) => {
-  res.send("fad");
-});
-
 app.get("/download-pdf", (req, res) => {
   const file = `${__dirname}/file.pdf`;
   res.download(file, "file.pdf", (err) => {
