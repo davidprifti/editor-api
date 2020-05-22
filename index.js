@@ -15,7 +15,7 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/download-pdf", (req, res) => {
-  const file = `${__dirname}/file.pdf`;
+  const file = `${__dirname}/app/file.pdf`;
   res.download(file, "file.pdf", (err) => {
     console.log(err);
   });
